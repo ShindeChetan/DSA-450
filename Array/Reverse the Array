@@ -1,0 +1,22 @@
+string reverseWord(string str)
+{
+    int n = str.length();
+    int start=0,end=n-1;
+    char temp;
+    
+    
+    while(start<end)
+    {
+        temp = str.at(start);
+        str.at(start) = str.at(end);
+        str.at(end) = temp;
+        
+        //Use inbuilt swap function for reversing
+        //swap(str[start],str[end]);
+        
+        start++;
+        end--;
+    }
+    
+    return str;
+}
